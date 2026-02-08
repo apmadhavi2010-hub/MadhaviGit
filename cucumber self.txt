@@ -1,0 +1,48 @@
+Given used for prerequisite
+When user action or steps to perform
+Then to assertion level or expected result
+and to add more (like to attach screeshots or delete some files)
+
+
+hooks
+@before  and @after are the hooks
+this will execute for all the feature files
+
+background
+it executes for all the testcases in a particular feature file
+
+Plug in install to highlight scenario given when then 
+eclipse->help->eclipse market place
+
+---------------------------------------------------------------------
+Tags -> To categorize and filter the test scenarios
+
+and define the same thing in TestRunner file
+like 
+
+tags=@Regression
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features="c:/featurefile.java", glue="stepDefinitions",tags="@Regression",plugin="json:target/jsonReports/cucumber-report.json")
+public class TestRunner{
+}
+
+
+@SmokeTest
+Feature: Login Feature
+
+  @Regression
+  Scenario: Valid login
+    Given User is on the login page
+    When User enters valid credentials
+    Then User should be redirected to the homepage
+
+  @Sanity @Regression
+  Scenario: Invalid login
+    Given User is on the login page
+    When User enters incorrect credentials
+    Then User should see an error message
+
+
+mvn test -Dcucumber.options="--tags @R	egression"
+--------------------------------------------------------------------------
