@@ -1,0 +1,9 @@
+1. Java code can be executed on multiple platforms like windows linux mac/OS etc. Java code is compiled by compiler and converted in to bytecode
+This bytecode can be run on any platform
+2. Java is known for security. It can develop virus free systems. Java is secured because, java programs run inside the virtual machine sandbox
+There is a byte code verifier. It check the code fragments for illegal code which violates access rights to objects.
+
+Robust -
+portable -
+High performance -
+Multithreaded - 
