@@ -1,0 +1,489 @@
+
+       Manual Testing , Sql, Basics of Rest API automation, Core Java
+       HP ALM, Jira, SOAP UI, Jmeter, Rest API, Postman, Eclipse, Bugzilla, Oracle, Sql
+
+Manual testing
+sql
+rest API
+cor Java
+postman
+jmeter
+api
+
+
+				 
+1. What is API 
+API is an interface between two applications and allows two software systems to communicate to each other. 
+its a collection of functions executed by another software program
+eg: Google Map API, Amazon API
+
+API works as it takes request from source, takes the request to the database, fetches the request data from database 
+and returns response to the source. 
+
+API takes the request from the user and gives the response without exposing the internal details.
+
+2. What is API testing
+API testing is a software testing that tests API directly. API is a part of Integration testing to check
+whether API meets expectations in terms of functonality, performance, reliability and security of applications. In
+API testing, primary focus is on Business logic layer of the software architecture
+
+3. Types of API testing
+
+Unit Testing
+Functional Testing
+Load Testing
+Runtime/Error Detection
+Security Testing
+UI testing
+interoperability and WS compliance tesing
+penetration testing
+fuzz testing
+
+4. Protocols used in API Testing
+
+HTTP, REST, SOAP, JMS, UDDI
+
+5. Tools used for API testing
+
+POST Man
+parasoft SOA test
+Alertsite API monitoring
+
+6. API framework
+
+API framework is described by the config file which consists of all the list of API's that are required to be activated and are activated for any
+particular program run. This is essential as every test run doesnt require all API's
+
+7. Limits of API usage
+
+Many API's have certain limits set up by the provider. Hence we should estimate the usage and understand how that impacts over all cost 
+
+8. Advantages of API testing
+
+Tests for core functionality - API testing provides access to the application without the user interface. The core functionality of the application will be tested 
+before the GUI tests, this will help to detect the minor issues which can become bigger during the GUI testing
+
+language independent - In API testing, data exchange is using XML or JSON. These transfer modes are completely language independent, which allows
+users to select any code language when adopting automation test service for the project
+
+Time effective - API testing is less time consuming than GUI testing. Particularly API test requires less code so it can provide better and faster test coverage 
+compare to GUI test automation.This will reduce the cost for testing project
+
+Easy integration with GUI
+
+9. 
+Post Man: Its an API testing tool used by developement team to create share and test API.This tool provides GUI interface to the API and a command line utility
+for testers.
+
+
+10. Purpose and benefits of using Postman for API testing?
+
+-main purpose is to simplify and stream line the process of testing API's.
+-postman provides user friendly interface for creating and sending requests to API's, allowing to explore and understand their functionalities
+-Quickly test various scenarios by sending different types of requests (GET, PUT, POST, DELETE) and examining the responses.
+-it validates API responses ensuring they meet expected criteria and identify the errors and inconsistencies
+-postman lets you to create and manage environments , making it convinient to switch between different setups such as development, staging and production
+-postman provides the facility to share the collections, requests and test suites among developers testers and other stakeholders
+
+11. Postman methods or Http methods
+
+Get - retrieves information from a specified resource
+Post - submits data to be processed by a specified resource
+put - updates a specified resource with new data
+Delete - deletes a specified resource
+patch - partially updates a specified resource
+
+12. How do u handle autentication and authorization in postman?
+
+Postman provides multiple ways to handle authentication and authorization in API requests.
+
+some commonly used methods include
+Basic authentication - You can include the username and password in the request headers using the "Authorization" header
+Token based authentication - postman allows to include tokens such JWT or OAuth in the request headers or query parameters
+API Key - if an API requires an API key,  u can pass it as a request header of query parameter
+OAuth 2.0 - Postman has built in OAuth 2.0 support, allowing to configure and authenticate using various OAuth flows , such as Authroization code or client credentials
+custom authentication - postman scripting capabilities allows to implement custom authentication by modifying request headers or using specialized libraries
+
+13.How do you create and send request in Postman?
+
+1. Open postman and create a new request by selecting the appropriate HTTP method (ex: GET and POST) from the drop down menu
+2. Enter the request url in the address bar
+3. Add any required headers, query parameters, or request body data depending on API endpoint requirements
+4. click the send button to send the request to the API server
+Postman will display the response, including the status code, headers and body to analyze and results of the request.
+
+14. Tools used for API testing
+
+Postman
+jmeter
+soap ui
+Apigee
+
+15. what are required headers, query parameters, request body data
+
+16. Core components of HTTP request.
+
+HTTP Methods: GET, PUT, POST, DELETE
+URI: uniform resource locator. Locates a resource
+version of HTTP
+content type: application/JSON
+content length
+payload: message contained in the request body
+
+17. HTTP response code for a POST request with incorrect parameters - 400 Bad Request
+404 resource not found, 200 response ok
+304 status code Not Modified, response body is empty
+201, when you successfully create a resource using a POST or PUT request , status code 201 denotes resource is created
+301, when the page is permanently redirected from one website to another, postman 301 status code is used to indicate this. the search engine indicates that the old pa
+page is out of date and has the to index the URL of the new page
+
+18. Various authorization methods provide by postman
+API Key, Basic auth, Bearer token, oauth 1.0, oauth 2.0, AWS signature
+
+19.DIfferent types of API requests supported in postman
+GET, POST, PUT, PATCH, DELETE, COPY, OPTIONS, LINK, UNLINK, LOCK, UNLOCK, VIEW
+
+20. Limitation of postman
+
+It cannot process 1000+ API requests
+It might be challenging to manage collections and requests for large projects
+For managing work space as code, postman is not appropriate, it is because dynamic API requests would result in a lot of code duplication
+
+21. What is basic auth in postman
+
+It is a method of authorization in postman for HTTP user agents, such as web browsers to enter login and password.It becomes connected with the request 
+when the username and password are entered
+
+22. Difference between Query parameters and path variables
+Query parameters are used to sort or fileter the resources, and Path variables are used to identify specific resources
+========================================================================================================================================================================
+SQL
+
+1. what is a join
+THis is a keyword used to query the data from more tables which has relationship between the fields of the tables
+
+inner join 
+left join
+right join
+full join
+
+inner join - inner join returns where there is atleast one match of rows between the tables
+
+right join - it returns rows which are common between the tables and all rows of right hand side table
+
+left join - it returns rows which are common between the tables and all rows of left hand side table
+
+full join - it returns rows when there are matching rows in the tables. It returns all the rows from left hand side and all rows from right hand side table
+
+2. Primary key - combination of fields which uniquely identies a row and has NOT NULL constraint that is Primary key values cannot  be NULL
+
+3. Foreign key - foreign key is one table which can be related to the primary key of another table. relation ship needs to be created between two tables
+by referencing foreign key of one table with the primary key of another table
+
+4 ddl, dml
+
+5 windows functions - RANK(), DENSE_RANK(), ROW_NUMBER()
+
+RANK() - Rank() function assign rank to all the rows with in every partition. It assigns rank in such a way that rank 1 is given to the first row and rows 
+having same value are assigned same rank. For the next rank after two same rank values, one rank value will be skipped
+
+DENSE_RANK() - It assigns rank to each row with in the partition. It assigns rank same as rank function but the differnce between rank and dense rank
+is for the next rank after two same ranks, consecutive integer is used, no rank is skipped
+
+ROW_NUMBER() - It assigns consecutive integer for each row with in the partition, Within partition no two rows can have same row number
+
+order by() should be specified compulsory while using rank window functions
+over clause is used with window function to define that window. over clause does two things. Partition rows in to form set of rows.(Partition by clause)
+order rows with in those partitions into a particular order (order by clause)
+
+Select name, age, department, salary, average(salary) OVER(PARTITION BY Department ORDER BY Age) As Avg_Salary from employee
+
+6. Set operators
+
+Set operators are used to combine the result of two operators
+UNION - UNION will be used to combine the result of two statements. Duplicate rows will be eliminated from the results after performing union operation
+select * from t_emp UNION select * from t2_emp;
+
+UNION ALL - This operator combines all the records from both the queries. Duplicate rows will not be eliminated from the results after
+performing UNION ALL operation
+
+INTERSECT - It is used to combine two select statements, but returns records which are common from both select statements.
+
+MINUS - It displays the records which are present in the first query but absent in the second query and with no duplicates
+own words - it displays from first table, duplicates records will not return and also the records in second table which are not duplicates also not return 
+
+Rules to be followed to perform set operators in SQL. 
+1. The number and order of columns must be same
+2. Data types must be compatible
+
+7. case statements
+
+CASE expression goes through conditions and returns a value when the first condition is met. If the condition is true it stops reading and return the result
+If no conditions are true it returns the value in else condition. If there is no else part and no conditions are true it returns null.
+
+CASE 
+  when condition 1 then result1
+  when condition 2 then result2
+  when condition n then resultn
+  else result
+END;
+
+
+
+8. nvl, nvl2, coalesce 
+If column is optional and contains Null values, then the addition and multiplication result on it will be NULL.
+select productname, UnitPrice * (UnitsInStock + COALESCE(UnitsOnOrder,0)) from products; 
+or can be used IfNull()
+
+COALESCE() and IFNULL() functions lets us to return an alternative value if an expression is NULL in mysql;
+
+In Oracle NVL() function does the same
+
+In sql server ISNULL() and COALESCE() functions does the same
+
+NVL() - if expr1 is notnull then expr1 is returned, else expr2 is returned.
+
+NVL2 - For NVL2 if expr1 is notnull then it returns expr2, if expr1 is null then returns expr3
+
+
+
+
+9. group by - groups rows that have same values into summary rows. it often used with aggregrate functions count(), Min() , Max(), Sum(), avg()to group the result 
+set by one or more columns.
+select column name(s) from tablename where condition group by columnname(s) order by column name(s);
+
+having- having clause is added to sql because where condition cannot be used with aggregrate functions
+where condition,group by columnname(s), having condition, order by columnname(s)
+group by lastname having count(orders.orderid) > 25;
+
+where - It extracts the records which fulfills the specified condition.
+select * from customers where country="Mexico
+
+
+=====================================================================================================================
+
+Manual Testing:
+---------------
+
+Regression testing, retesting, system testing, end to end tesing, functional and non functional testing, usability testing, 
+exploratory testing, adhoc testing, compatability testing, integration testing, system integration testing, smoke and sanity testing,
+alpha testing, beta testing
+
+1. Exploratory testing: 
+
+It is a hands-on approach in which testers are involved in minimum planning and maximum test execution. 
+The test design , test execution activities are performed parallely without formally documenting , the test conditions, test cases and test scripts.
+FOr example if tester is tesing boundary value , they test with important boundary values without documentiong anything but some notes will be return, so 
+that report can be produced later
+
+2. Regression testing - A new change in the code, or any bug fix does not impact the existing functionality of application. 
+Test cases are re-executed to check the previous functionality of the application is working fine and new changes have not produced any bugs.
+
+3. Retesting - Retesting is testing some particular testcases where the defects are found during execution time. Retesting occurs when the 
+product is already tested with some defects, it needs to be tested again.
+
+4. system testing - System testing is testing of a complete and fully integrated software product. It ensures system meets the quality
+standards and fulfills the user expectations.
+
+5. End to end testing - it verifies functionality and performance of an entire software application by simulating real world user scenarios 
+and replicating live data.
+
+6. Functional - Functional testing is a type of the system is tetsed against functional requirements and specifications.
+Each functionality is tested by providing test input, expecting the output and comparing the actual output with the expected output
+examples are unit testing, smoke testing, integration testing, regression testing
+
+Non functional testing - It is performed to verify the non functional requirements of the application. It verifies the behaviour of the
+system is as per the requirement or not. 
+example : Performance testing, Load testing, stress testing, scalibility testing
+
+7. Usability testing - It is a non functional testing, checks the user friendliness, efficiency and accuracy of the application.
+Generally it is performed from an end user view point to verify if the system is effeciently working or not
+Primary purpose of usability testing is it should be easy to use for the end user who is meant to use it with client specified functional and 
+business requirements
+
+8 Adhoc testing - Testing the application randomly is called adhoc testing. it is also called Monkey testing or Gorilla testing.
+it is negative testing because we test the application against the client requirements.
+When the end user tests the application randomly, he or she may find the bug but the professional test engineer uses the software systematically,
+he may not find the same bug. In adhoc testing we dont follow the requirement because we randomly check the software.
+
+9.compatability testing - It is a non functional testing. Checking the functionality of an application on different software, hardware platforms, 
+network, and browsers is known as compatability testing
+
+10. Integration testing - Integration testing is testing individual components in to  a group. Once all the modules or components are working 
+independently, then we need to check the data flow between dependent modules is known as Integration testing
+
+11. System Integration testing - It is a QA process to ensure the compatability of two or more systems. It helps to ensure the systems are working
+together correctly. This process can involve the testing of software, systems or network.
+
+12. Smoke testing - It guarantees the application basic and critical features are working fine before doing exhaustive testing or
+rigorous testing. Its like Build verification testing. In smoke testing, we only perform positive testing and can enter only valid data
+
+13. Sanity testing - It is performed to check whether the bug have been fixed after the build. Initial aim of sanity testing is to check whether the planned
+features work roughly as expected. If the sanity feature fails , build is rejected to save the cost and time complex in more severe testing.
+
+Difference between smoke and sanity testing is 
+smoke testing is done as soon as the build is installed
+sanity testing is done as soon as the bug fixes are done
+
+smoke testing is scripted where as sanity testing can be done without testcases or scripts
+
+smoke testing takes all important features and performs high level testing.
+sanity testing takes some very significant features and performs deep testing
+
+14. Alpha and Beta testing - Alpha testing is done by the testers and quality analysts inside the organization where as 
+Beta testing is done by real users who will be actually using the software
+Alpha testing takes place with in the organization but beta testing takes place in the user's environment
+Only functionality and usability will be checked during alpha testing, where as functionality and usability, security and dependency are all
+throughly checked during Beta testing
+
+15. Bug life cycle
+
+Different status of bugs like new/open, Assigned, fix, re-open, closed
+
+                               -> Close
+
+New/open -> Assigned -> Fixed  -> Re-test
+
+                               ->  Reopen
+
+As soon as test engineer found the bug, he creates a bug and the status is new, which indicates that the bug is just found.
+he assigned the bug to particular developer or dev/test lead and change the status as Assigned. 
+Developer reads through the step and decide whether the bug is valid or not. If the bug is valid , he analyses the code and  does necessary changes
+and status is changed to fixed. Once the code changes are done and bug is fixed, the test engineer retest the bug and performs the same action 
+once again change the status accordingly. he closes the bug if it is working according to the requirement
+
+If the developer finds the bug invalid, or duplicate, can't fix, postpone/deferred, not reproducible, 	request for enhancement, he changes the 
+state accordingly and assigns to the tester
+
+16.SDLC  
+
+SDLC is a process that creates structure of development of software. There are different phases of SDLC.
+
+Requirement phase
+Designing phase
+Development phase
+Testing phase
+Deployment phase
+Maintenance phase
+
+Requirement phase - During this phase, client states requirements, expectations, related to the product or software. All these are gathred by the 
+business manager, or project manager or analyst of the service providing company. This imformation is very critical to develop the project as per
+the customer requirements
+
+Designing phase - Designing phase includes detailed analysis of new software according to the requirment phase. Design phase
+gives the way to accomplish these requirements. The decision of required tools such as java, php a database , combination of hardware and software to
+provide a platform on which software can run without any problem is taken in this phase
+
+Development phase - After the successful completion of requirement and design phase , the next step is to implement the design in to development
+of software system. In this phase work is divided in to small units and coding starts by the team of developers according to the design
+
+Testing phase - Testing is the last step of completing the software system. After developing GUI and backend combination , it is tested against the
+requirements stated in the requirement phase. Testing determines whether the software is actually working as per the requirements or not
+Development team makes a test plan. Test plan includes all types of essential testing such as integration testing, unit testing, acceptance testing
+and system testing. Non functional testing is also done in this phase
+If there are any defects in the software, testing team raises a defect and assigns to the development team. Development team verifies the defect
+and if it is valid it provides a fix and gives testing team to retest.
+
+Deployment phase - When a testing is completed, it is delivered to the customer for their use. They do beta testing and check software is working
+as per the requirements. if it is severe issue, development team fix it in short time. otherwise if it is less severe then it will wait for next release
+After all bugs and changes, software finally deployed to the end user
+
+Maintanance phase - This is the last and long lasting phase of SDLC where the customer starts using the software, the actual problems occur at this
+phase and there is a need to solve those defects. There can be changes to hardware , software to maintain its effectiveness like to improve its 
+performance, enhance security features and according to customer requirements.
+
+
+17.STLC
+
+Procedure of software testing is also known as Software testing life cycle which includes phases of testing process. To improve
+the quality of software product we follow the process
+
+STLC contains the following steps
+
+1. Requirement analysis
+2. Test plan creation
+3. Environment set up
+4. Test case Execution
+5. Defect Logging
+6. Test cycle closure
+
+1. First step of STLC is requirement analysis. In this phase tester analyses the requirement document of SDLC, to examine requirements stated by the client
+After examing the requirements, testers make a test plan to check whether the software meeting the requirements or not
+
+2. Test plan creation: It is the crucial phase of testing where all the testing strategies are defined. 
+Tester determines estimated effort and cost of the entire project. THis phase takes place after succesful completion of Requirement analysis
+Testing strategy and effort estimation documents are provided by this phase. Test case document will be started after successful completion of 
+test plan
+
+3. Test case Execution: Testing team writes down the test cases and prepares the test data if required. Prepared test cases
+are reviewed by the peer team member of test lead. Requirement tracebility matrix will also be done in this phase. This is done to track
+the requriments. Each testcase is mapped with requirement specification. 
+
+4. Environment set up requires a group of essential hardware and software to create a test environment. 
+
+5 Defect logging:Defects will be raised by the testing team and assigned to the developement team using a any defect management tool. 
+Defects will be logged and bugs will be analyzed in depth to detect the type of the defect and severity.
+
+6. Test closure: Test cycle closure report includes all the reports including software design, development, testing results and defect reports.
+This will be maintained for all the projects for any future requirements
+
+
+18. Tracebility matrix. Can we do in QC?
+
+19. seviarity and priority
+
+20. which model u follow for testing
+
+21. Boundary value analysis and Equivalence closed partitioning
+
+
+
+
+
+
+
+
+
+Sushma discussion
+test planning - estimates complexity, scope, number of resouces
+qc
+jira
+challenges
+100 percent test coverage
+resouce
+estimates
+test exit report
+
+day to day activities
+
+Rest api automation rahul shetty
+
+
+
+
+
+
+
+
+
+
+Qspiders
+9900018030 / 8951965092
+
+Fireflink - AI based scriptless 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
